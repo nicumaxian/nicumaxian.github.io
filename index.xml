@@ -6,10 +6,20 @@
     <description>Recent content on Nicu Maxian - personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nicumaxian.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implementing IsASCII method. Benchmark.</title>
+      <link>https://nicumaxian.github.io/posts/3-benchmark-simple-isascii/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicumaxian.github.io/posts/3-benchmark-simple-isascii/</guid>
+      <description>These days I needed a realisation of string ASCII validator. After few google attempts, I found a single constant unicode.MaxASCII in Go SDK, which could help to resolve this problem. To be sure, I asked on stackoverflow.
+Since we were discussing about performance, user peterSO did a benchmark, which had a really interesting numbers. I decided to go forward and create more implementations. Source code can be found here.</description>
+    </item>
     
     <item>
       <title>Min/Max heap. Heap sort.</title>
@@ -41,7 +51,10 @@ Why hugo Why hugo? Because it is simple,fast and it&amp;rsquo;s based on Markdow
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nicumaxian.github.io/about/</guid>
-      <description>Welcome! I&amp;rsquo;m Nicu Maxian, Developer Advocate at @ellation. I&amp;rsquo;m a geek/nerd, huge fan of Go Development and Software Engineering in general. Here I share my experiences and expose my ideas: all views, posts and opinions are my own.</description>
+      <description>Welcome! I&amp;rsquo;m Nicu Maxian, Senior Software Engineer at @ellation.
+I&amp;rsquo;m a huge fan of Go Development, Algorithms and Software Engineering in general. Here I share my experiences and expose my ideas: all views, posts and opinions are my own.
+My story so far December 2015 - March 2017 In this period, I was an Android Developer at Jivy Group.
+March 2017 - September 2018 In this period, I worked as a backend .</description>
     </item>
     
   </channel>

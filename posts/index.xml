@@ -6,10 +6,20 @@
     <description>Recent content in Blog posts on Nicu Maxian - personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nicumaxian.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implementing IsASCII method. Benchmark.</title>
+      <link>https://nicumaxian.github.io/posts/3-benchmark-simple-isascii/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicumaxian.github.io/posts/3-benchmark-simple-isascii/</guid>
+      <description>These days I needed a realisation of string ASCII validator. After few google attempts, I found a single constant unicode.MaxASCII in Go SDK, which could help to resolve this problem. To be sure, I asked on stackoverflow.
+Since we were discussing about performance, user peterSO did a benchmark, which had a really interesting numbers. I decided to go forward and create more implementations. Source code can be found here.</description>
+    </item>
     
     <item>
       <title>Min/Max heap. Heap sort.</title>
