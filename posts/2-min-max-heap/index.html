@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+    
+    
 
     <meta name="author" content="Nicu Maxian">
-    <meta name="description" content="Nicu Maxian&#39;s null blog">
+    <meta name="description" content="I&rsquo;m back again to my Algorithms and Data Structure journey. This time I will write a post for each chapter or topic.
+Min/Max Heap definition    A Max Heap is a binary tree where it&rsquo;s respected exactly one condition
+ Every node should be greater than it&rsquo;s childs
+ And the same rule is applied for Min Heap
+ Every node should be smaller than it&rsquo;s childs
+ Data structure    As a data structure, heap is a nearly complete binary tree.">
     <meta name="keywords" content="blog,developer,personal">
 
-    <base href="https://nicumaxian.github.io">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Min/Max heap. Heap sort."/>
+<meta name="twitter:description" content="I&rsquo;m back again to my Algorithms and Data Structure journey. This time I will write a post for each chapter or topic.
+Min/Max Heap definition    A Max Heap is a binary tree where it&rsquo;s respected exactly one condition
+ Every node should be greater than it&rsquo;s childs
+ And the same rule is applied for Min Heap
+ Every node should be smaller than it&rsquo;s childs
+ Data structure    As a data structure, heap is a nearly complete binary tree."/>
+
+    <meta property="og:title" content="Min/Max heap. Heap sort." />
+<meta property="og:description" content="I&rsquo;m back again to my Algorithms and Data Structure journey. This time I will write a post for each chapter or topic.
+Min/Max Heap definition    A Max Heap is a binary tree where it&rsquo;s respected exactly one condition
+ Every node should be greater than it&rsquo;s childs
+ And the same rule is applied for Min Heap
+ Every node should be smaller than it&rsquo;s childs
+ Data structure    As a data structure, heap is a nearly complete binary tree." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nicumaxian.github.io/posts/2-min-max-heap/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-10-22T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-10-22T00:00:00&#43;00:00" />
+
+
+
     <title>
-  Min/Max heap. Heap sort. · Nicu Maxian - personal blog
+  Min/Max heap. Heap sort. · Nicu&#39;s Blog
 </title>
 
-    <link rel="canonical" href="https://nicumaxian.github.io/posts/2-min-max-heap/">
+    
+      <link rel="canonical" href="https://nicumaxian.github.io/posts/2-min-max-heap/">
+    
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:300,700|Source+Code+Pro:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+    
+    
+    <link rel="preload" href="https://nicumaxian.github.io/fonts/forkawesome-webfont.woff2?v=1.1.7" as="font" type="font/woff2" integrity="sha256-hEIt6X6xzye8ubyk8/uxjz68cRZHsJxoKS9fQ8idUGQ=" crossorigin>
 
     
       
@@ -29,40 +62,61 @@
     
 
     
-      <link rel="stylesheet" href="https://nicumaxian.github.io/css/custom.css">
+
+    
+
     
 
     <link rel="icon" type="image/png" href="https://nicumaxian.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://nicumaxian.github.io/img/favicon-16x16.png" sizes="16x16">
 
+    <link rel="apple-touch-icon" href="https://nicumaxian.github.io/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://nicumaxian.github.io/images/apple-touch-icon.png">
+
     
 
-    <meta name="generator" content="Hugo 0.49.2" />
+    <meta name="generator" content="Hugo 0.81.0" />
   </head>
 
-  <body class="">
+  
+  
+  <body class="colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="https://nicumaxian.github.io">
-      Nicu Maxian - personal blog
+    <a class="navigation-title" href="https://nicumaxian.github.io/">
+      Nicu&#39;s Blog
     </a>
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://nicumaxian.github.io/posts/">Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://nicumaxian.github.io/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://nicumaxian.github.io/about/">About</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://nicumaxian.github.io/about/">About</a>
-          </li>
         
-      
-      
-    </ul>
+      </ul>
+    
   </section>
 </nav>
 
@@ -73,52 +127,70 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Min/Max heap. Heap sort.</h1>
+          <h1 class="title">
+            <a class="title-link" href="https://nicumaxian.github.io/posts/2-min-max-heap/">
+              Min/Max heap. Heap sort.
+            </a>
+          </h1>
         </div>
         <div class="post-meta">
-          <span class="posted-on">
-            <i class="far fa-calendar"></i>
-            <time datetime='2018-10-22T00:00:00Z'>
-              October 22, 2018
-            </time>
-          </span>
-          <span class="reading-time">
-            <i class="far fa-clock"></i>
-            2 minutes read
-          </span>
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2018-10-22T00:00:00Z'>
+                October 22, 2018
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
         </div>
       </header>
 
       <div>
         
-
-<p>I&rsquo;m back again to my Algorithms and Data Structure journey. This time I will write a post for each chapter or topic.</p>
-
-<h1 id="min-max-heap-definition">Min/Max Heap definition</h1>
-
+        <p>I&rsquo;m back again to my Algorithms and Data Structure journey. This time I will write a post for each chapter or topic.</p>
+<h1 id="minmax-heap-definition">
+  Min/Max Heap definition
+  <a class="heading-link" href="#minmax-heap-definition">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
 <p>A <strong>Max Heap</strong> is a binary tree where it&rsquo;s respected exactly one condition</p>
-
 <blockquote>
 <p>Every node should be <strong>greater</strong> than it&rsquo;s childs</p>
 </blockquote>
-
 <p>And the same rule is applied for <strong>Min Heap</strong></p>
-
 <blockquote>
 <p>Every node should be <strong>smaller</strong> than it&rsquo;s childs</p>
 </blockquote>
-
-<h2 id="data-structure">Data structure</h2>
-
+<h2 id="data-structure">
+  Data structure
+  <a class="heading-link" href="#data-structure">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>As a data structure, heap is a nearly complete binary tree.
 The tree is completely filled on all levels, except last one.
 Last once should be filled from left to right.
-<img src="https://nicumaxian.github.io/images/posts/2/max-heap.png" alt="Valid max heap" /></p>
-
-<h2 id="code">Code</h2>
-
-<h3 id="parent-left-right">Parent/Left/Right</h3>
-
+<img src="https://nicumaxian.github.io/images/posts/2/max-heap.png" alt="Valid max heap"></p>
+<h2 id="code">
+  Code
+  <a class="heading-link" href="#code">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="parentleftright">
+  Parent/Left/Right
+  <a class="heading-link" href="#parentleftright">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>Since Golang has 0-indexed arrays, implementation of these methods may look a little bit different.
 You can do cleaner implementation, by not using 0-element.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-style:italic">// left returns parent index for i-th node
@@ -134,8 +206,13 @@ You can do cleaner implementation, by not using 0-element.</p>
 <span style="font-style:italic">// right returns right child index for i-th node
 </span><span style="font-style:italic"></span><span style="font-weight:bold">func</span> right(i <span style="">int</span>) <span style="">int</span> {
 	<span style="font-weight:bold">return</span> (i &lt;&lt; 1) + 2
-}</code></pre></div>
-<h3 id="maxheapify">MaxHeapify</h3>
+}
+</code></pre></div><h3 id="maxheapify">
+  MaxHeapify
+  <a class="heading-link" href="#maxheapify">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-style:italic">// maxHeapify places i-th node in the right position in it&#39;s subtree
 </span><span style="font-style:italic"></span><span style="font-weight:bold">func</span> maxHeapify(i <span style="">int</span>, heap []<span style="">int</span>) {
 	left := left(i)
@@ -153,16 +230,27 @@ You can do cleaner implementation, by not using 0-element.</p>
 		heap[i], heap[max] = heap[max], heap[i]
 		maxHeapify(max, heap)
 	}
-}</code></pre></div>
-<h3 id="maxheap">MaxHeap</h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-style:italic">// maxHeap rearranges array into a max heap
+}
+
+</code></pre></div><h3 id="maxheap">
+  MaxHeap
+  <a class="heading-link" href="#maxheap">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="font-style:italic">// maxHeap rearranges array into a max heap
 </span><span style="font-style:italic"></span><span style="font-weight:bold">func</span> maxHeap(heap []<span style="">int</span>) {
 	<span style="font-weight:bold">for</span> i := len(heap) - 1; i &gt;= 0; i-- {
 		maxHeapify(i, heap)
 	}
-}</code></pre></div>
-<h3 id="heapsort">HeapSort</h3>
-
+}
+</code></pre></div><h3 id="heapsort">
+  HeapSort
+  <a class="heading-link" href="#heapsort">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>Using all functions defined above, we can easily do a sorting O(nlgn).
 Since we know that we have biggest number placed at index-0, we can swap it with the last item from the heap and call <code>maxHeapify</code> to rearrange node in it&rsquo;s subtree.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-style:italic">// heapSort sorts an array using a heap
@@ -173,35 +261,82 @@ Since we know that we have biggest number placed at index-0, we can swap it with
 		arr = arr[:l]
 		maxHeapify(0, arr)
 	}
-}</code></pre></div>
+}
+</code></pre></div>
       </div>
 
+
       <footer>
+        
+
+
+        
+        
         
       </footer>
     </article>
 
-    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
   </section>
 
       </div>
 
-      <footer class="footer">
-  <section class="container">
-    
-     © 2018
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-    
-  </section>
-</footer>
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2021
+         Nicu Maxian 
+      
+      
+      
+    </section>
+  </footer>
+
 
     </main>
 
     
+      
+        
+        <script src="https://nicumaxian.github.io/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js" integrity="sha256-runIpGTrezU0xxEPfF4WnnA54v2ScQ4GJtRR1nJa8Tc="></script>
+      
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

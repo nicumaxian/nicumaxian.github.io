@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog posts on Nicu Maxian - personal blog</title>
+    <title>Blog posts on Nicu&#39;s Blog</title>
     <link>https://nicumaxian.github.io/posts/</link>
-    <description>Recent content in Blog posts on Nicu Maxian - personal blog</description>
+    <description>Recent content in Blog posts on Nicu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://nicumaxian.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://nicumaxian.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implementing IsASCII method. Benchmark.</title>
       <link>https://nicumaxian.github.io/posts/3-benchmark-simple-isascii/</link>
@@ -18,7 +14,8 @@
       
       <guid>https://nicumaxian.github.io/posts/3-benchmark-simple-isascii/</guid>
       <description>These days I needed a realisation of string ASCII validator. After few google attempts, I found a single constant unicode.MaxASCII in Go SDK, which could help to resolve this problem. To be sure, I asked on stackoverflow.
-Since we were discussing about performance, user peterSO did a benchmark, which had a really interesting numbers. I decided to go forward and create more implementations. Source code can be found here.</description>
+Since we were discussing about performance, user peterSO did a benchmark, which had a really interesting numbers. I decided to go forward and create more implementations. Source code can be found here.
+Implementations    Using Go RANGE    This method uses a range iteration over a string.</description>
     </item>
     
     <item>
@@ -28,11 +25,11 @@ Since we were discussing about performance, user peterSO did a benchmark, which 
       
       <guid>https://nicumaxian.github.io/posts/2-min-max-heap/</guid>
       <description>I&amp;rsquo;m back again to my Algorithms and Data Structure journey. This time I will write a post for each chapter or topic.
-Min/Max Heap definition A Max Heap is a binary tree where it&amp;rsquo;s respected exactly one condition
+Min/Max Heap definition    A Max Heap is a binary tree where it&amp;rsquo;s respected exactly one condition
  Every node should be greater than it&amp;rsquo;s childs
  And the same rule is applied for Min Heap
  Every node should be smaller than it&amp;rsquo;s childs
- Data structure As a data structure, heap is a nearly complete binary tree.</description>
+ Data structure    As a data structure, heap is a nearly complete binary tree.</description>
     </item>
     
     <item>
@@ -41,8 +38,8 @@ Min/Max Heap definition A Max Heap is a binary tree where it&amp;rsquo;s respect
       <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://nicumaxian.github.io/posts/1-hello-hugo/</guid>
-      <description>About Hugo Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again. More details about hugo on official site.
-Why hugo Why hugo? Because it is simple,fast and it&amp;rsquo;s based on Markdown.</description>
+      <description>About Hugo    Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again. More details about hugo on official site.
+Why hugo    Why hugo? Because it is simple,fast and it&amp;rsquo;s based on Markdown.</description>
     </item>
     
   </channel>
